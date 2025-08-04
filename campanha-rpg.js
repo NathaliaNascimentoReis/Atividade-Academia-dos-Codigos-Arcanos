@@ -17,6 +17,10 @@ let defesa = 18;
 let percepcao = 25;
 let forca; // desbloquea no nível 66
 
+// Perícias de Ladino (somente desbloqueadas no nível 66)
+let furtividade = 15;
+let pontaria = 15;
+
 console.log(`🎮 Nível: ${nivel}, ❤️ Vida: ${vida}, 🛡️ Defesa Final: ${defesa}, 🪙 Moedas de Ouro: ${moedas}, ✨ XP final: ${xp}.\n`);
 
 // 3. Equipamentos
@@ -73,7 +77,7 @@ console.log(`🎮 Nível: ${nivel}, ❤️ Vida: ${vidaFinal}, 🛡️ Defesa Fi
 console.log(`Os detalhes abaixo nesta atualização foram registrados graças à análises de provas e testemunhos pós-ataque`);
 
 if (passarUmNivel) {
-    nivel +=1;
+    nivel ++;
     agilidadeFinal += 15;
     defesaFinal += 15;
     percepcao += 15;
@@ -86,7 +90,7 @@ if (passarUmNivel) {
     };
 }; 
 
-console.log(`Status atualizado:`);
+console.log(`Status e atributos atualizados:`);
 console.log(`🎮 Nível: ${nivel}, ❤️ Vida: ${vidaFinal}, 🛡️ Defesa: ${defesaFinal}, 🪄 Maana: ${maana}, 🪙 Moedas de Ouro: ${moedasFinal}, ✨ XP atual: ${xp}.`);
-
-console.log(`Após `);
+console.log(`⚡Agilidade: ${agilidadeFinal}, 👊 Força ${forca}, 👀 Percepção: ${percepcao} \n`);
+console.log(`Após roubar e vender com sucesso o Elixir, ${nome} se prepara para roubar o próximo item mágico: 'A Manopla de Scripts'. Para concluir este objetivo, a primeira etapa é adicionar próteses de cyberpsicose, que dará a possibilidade de combinar Maana com objetos tecnológicos, potencializando suas capacidades!`);

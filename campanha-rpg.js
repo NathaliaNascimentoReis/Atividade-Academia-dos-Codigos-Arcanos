@@ -3,6 +3,7 @@ let nome = "Desconhecido";
 let idade = "Desconhecida";
 let nivel = 65;
 let vida = 55;
+let vidaMaxima = 100;
 let classe = "Ladino";
 let moedas = 100;
 let xp = 90;
@@ -31,6 +32,7 @@ const equipamento = "Hoverboard Mágico";
 const elementoDoEquipamento = "Energia";
 const bonusDoEquipamento = 5;
 let agilidadeFinal = agilidade + bonusDoEquipamento;
+const kitMedicoCura = 30;
 
 // 4. Missão
 console.log(`Primeira vez avistado: Base de Facção Criminosa Organizada (FCO)`);
@@ -94,3 +96,22 @@ console.log(`Status e atributos atualizados:`);
 console.log(`🎮 Nível: ${nivel}, ❤️ Vida: ${vidaFinal}, 🛡️ Defesa: ${defesaFinal}, 🪄 Maana: ${maana}, 🪙 Moedas de Ouro: ${moedasFinal}, ✨ XP atual: ${xp}.`);
 console.log(`⚡Agilidade: ${agilidadeFinal}, 👊 Força ${forca}, 👀 Percepção: ${percepcao} \n`);
 console.log(`Após roubar e vender com sucesso o Elixir, ${nome} se prepara para roubar o próximo item mágico: 'A Manopla de Scripts'. Para concluir este objetivo, a primeira etapa é adicionar próteses de cyberpsicose, que dará a possibilidade de combinar Maana com objetos tecnológicos, potencializando suas capacidades!`);
+
+//  Capítulo 1 - Primeira Decisão: Use condicionais simples (if) para reagir a uma situação de perigo ou oportunidade.
+if (vida <= 70) {
+    vidaFinal += kitMedicoCura;
+    kitMedicoCura = 0;
+};
+
+let proteseDeCyberpsicose = 10000;
+let cirurgiaDeProtese = 25000;
+let programacaoDeProteseComEquipamentos = 3000;
+let valorTotalParaInvestimentoEmProtese = programacaoDeProteseComEquipamentos + proteseDeCyberpsicose + cirurgiaDeProtese;
+console.log(`Para adquirir, programar e instalar suas próteses, ${classe} gastou  ${valorTotalParaInvestimentoEmProtese}.`);
+
+if (moedasFinal > valorTotalParaInvestimentoEmProtese && (nivel = 66)) {
+    console.log(`${nome} compra Prótese de Cyberpsicose e realiza cirurgia par instalá-la em seu corpo`);
+} else {
+    console.log(`${nome} terá de roubar mais itens mágicos para conseguir investir na prótese e/ou aumentar seu nível par desbloquear Maana`);
+};
+

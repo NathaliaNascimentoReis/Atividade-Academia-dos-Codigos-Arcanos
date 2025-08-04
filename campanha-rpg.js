@@ -32,7 +32,7 @@ const equipamento = "Hoverboard Mágico";
 const elementoDoEquipamento = "Energia";
 const bonusDoEquipamento = 5;
 let agilidadeFinal = agilidade + bonusDoEquipamento;
-const kitMedicoCura = 30;
+let kitMedicoCura = 30;
 
 // 4. Missão
 console.log(`Primeira vez avistado: Base de Facção Criminosa Organizada (FCO)`);
@@ -109,9 +109,12 @@ let programacaoDeProteseComEquipamentos = 3000;
 let valorTotalParaInvestimentoEmProtese = programacaoDeProteseComEquipamentos + proteseDeCyberpsicose + cirurgiaDeProtese;
 console.log(`Para adquirir, programar e instalar suas próteses, ${classe} gastou  ${valorTotalParaInvestimentoEmProtese}.`);
 
+// Capítulo 2 - Escolha Estratégica: Use condicionais compostas (if/else) para criar um momento de escolha binária decisiva.
 if (moedasFinal > valorTotalParaInvestimentoEmProtese && (nivel = 66)) {
     console.log(`${nome} compra Prótese de Cyberpsicose e realiza cirurgia par instalá-la em seu corpo`);
 } else {
-    console.log(`${nome} terá de roubar mais itens mágicos para conseguir investir na prótese e/ou aumentar seu nível par desbloquear Maana`);
+    console.log(`${nome} terá de roubar mais itens mágicos para conseguir investir na prótese e/ou aumentar seu nível para desbloquear Maana \n`);
 };
+
+console.log(`Após adquirir suas próteses potencializadoras de poder, ${nome} e seu grupo seguem seus caminhos para a Base da RobotsTech, para roubar a Manopla de Scripts. Suas motivações e contratantes permanecem desconhecidos`);
 

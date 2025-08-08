@@ -242,10 +242,113 @@ console.log(
   `⚡Agilidade: ${agilidadeFinal}, 👊 Força ${forca}, 👀 Percepção: ${percepcao} \n`
 );
 
-console.log(`O próximo desafio dos criminosos será invadir cautelosamente a base da empresa RobotsTech (empresa desenvolvedora de robôs supertecnológicos) para roubar "A Manopla De Scripts"!`);
+console.log(
+  `O próximo desafio dos criminosos será invadir cautelosamente a base da empresa RobotsTech (empresa desenvolvedora de robôs supertecnológicos) para roubar "A Manopla De Scripts"!`
+);
 
 let manoplaDeScripts = false;
 
 console.log(
   `Enquanto se dirigiam à sua próxima parada, o prédio da RobotsTech, ${classe} e seus colegas aproveitam o caminho para organizar suas coisas, saqueando os mantimentos e armas do condutor falecido. Com sorte, no caminhão, encontram três Sacos de Capacidade Infinita, que distribuem igualmente. \n`
 );
+
+// 2- Arrays - As Coleções Arcanas
+// 3.5. Criar e manipular coleções de dados
+// 3.5.1. Declaração e inicialização
+let sacoDeCapacidadeInfinita = [
+  {
+    Arma: "Pistola Mágica",
+    Quantidade_de_balas: 14,
+    Elemento_balas: "Pyro",
+    Dano_de_tiro: 8,
+  },
+  {
+    Arma: "Coquetel Molotov", // encontrado no caminhão nos itens do motorista
+    Quantidade_de_explosivos: 5,
+    Elemento_explosivos: "Pyro",
+    Dano_de_explosao: 12,
+  },
+  {
+    Arma: "Metralhadora", // encontrado nos itens do motorista
+    Quantidade_de_balas: 30,
+    Elemento_balas: "Pyro",
+    Dano_de_tiro: 10,
+  },
+];
+
+let aliados = [
+  {
+    Nome: "?",
+    Genero: "Homem",
+    Idade: "?",
+    Arma: "Revólver",
+    Elemento_da_arma: "Energia",
+    Dano_base_da_arma: 4,
+  }, // o elemento "Energia" paralisa inimigos com choque
+  {
+    Nome: "?",
+    Genero: "Homem",
+    Idade: "?",
+    Arma: "UZI",
+    Elemento_da_arma: "JavScript",
+    Dano_base_da_arma: 16,
+  }, // o elemento "JavaScript" é super letal, pois quando as balas acertam o inimigo, geram uma explosão, que corrói todo o corpo do atigindo
+];
+for (let i = 0; i < aliados.length; i++) {
+  console.table(aliados[i]);
+}
+
+let inimigosEncontrados = [
+  // para derrotar um inimigo, é necessário dar 16 pontos de dano ou diversos ataques frenéticos
+  { Identificado_como: "Motorista de caminhão", Estado: "Morto" }, // Será preenchido na aventura
+];
+let tesourosEncontrados = [
+  {}, // Array vazio será preenchido na aventura
+];
+let salasExploradas = [
+  {}, // Array vazio será preenchido na aventura
+];
+
+console.log(
+  `Com a organização de seus itens atuais, os invasores se preparam para a batalha. ${nome} e um de seus parceiros, estão na traseira do caminhão com suas armas prontas para o ataque; enquanto isso, o outro dirige o veículo vestindo o uniforme do condutor morto, para entrar sem ser percebido.\n`
+);
+
+console.log(
+  `Ao chegar no portão da base, o homem disfarçado utiliza o crachá do inimigo falecido e entra na base. Ao passar, ele é parado por um segurança, que pede para entrar com o caminhão na garagem para uma vistoria. \n`
+);
+
+console.log(
+  `No instante em que o segurança abre as portas da traseira do caminhão para averiguar, ${classe} pega a submetralhadora e dá uma coronhada na cabeça dele, que cai no chão \n`
+);
+
+inimigosEncontrados.push({
+  Identificado_como: "Segurança",
+  Estado: "Caído",
+  Arma: "Stun Gun",
+  Elemento_da_arma: "Energia",
+});
+
+console.table(inimigosEncontrados);
+
+if (forca + 15 >= 20) {
+  // +15 pois ambos os criminosos que se encontravam na traseira o seguraram
+  console.log(
+    `O segurança é segurado fortemente contra o chão da garagem, e, friamente, coronhadas frenéticas são desferidas contra seu rosto. O desfigurado (palavra perfeita para descrever o estado dele após os golpes), morre no chão da garagem. Seu corpo é colocado acima do outro no compartimento do veículo.`
+  );
+
+    for (let i = 0; i < inimigosEncontrados.length; i++) {
+    if (inimigosEncontrados[i] = "Morto") {
+        sacoDeCapacidadeInfinita.push(inimigosEncontrados[i, Arma]);
+    }
+}
+
+inimigosEncontrados[1].splice("Desfigurado", "Morto");
+
+} else {
+  console.log(`O segurança consegue escapar e chama reforços`);
+}
+
+console.table(sacoDeCapacidadeInfinita);
+console.table(inimigosEncontrados);
+
+// após isto, eles 
